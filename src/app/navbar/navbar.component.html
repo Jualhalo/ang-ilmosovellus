@@ -1,0 +1,9 @@
+<h2>Ilmoittautuminen</h2>
+<div>
+    <ul>
+        <li><a routerLink="/list">Ilmoittautuneet</a></li>
+        <li><a routerLink="/new">Ilmoittautumislomake</a></li>
+        <li *ngIf="logstate === false"><a routerLink="/login">Sisäänkirjautuminen</a></li>
+        <li *ngIf="logstate === true"><a routerLink="/login" (click)="logOut()">Uloskirjautuminen</a></li>
+    </ul>
+</div>

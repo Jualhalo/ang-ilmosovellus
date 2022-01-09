@@ -1,0 +1,33 @@
+<form [formGroup]="regForm" (ngSubmit)="onSubmit(regForm.value)">
+    <div>
+        <label for="name">
+            Nimi
+        </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+        <label for="email">
+            Email
+        </label>
+        <input id="email" type="text" formControlName="email">
+    </div>
+    
+    <div>
+        <label for="food">
+            Ruoka
+        </label>
+        <select formControlName="food">
+            <option *ngFor="let food of foods" [ngValue]="food">{{food}}</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="sauna">
+            Osallistun saunailtaan
+        </label>
+        <input id="sauna" type="checkbox" formControlName="sauna">
+    </div>
+
+    <button class="button" type="submit">Lähetä</button>
+
+</form>

@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <div>
+        <label for="tunnus">
+            Tunnus
+        </label>
+        <input id="tunnus" type="text" formControlName="tunnus">
+    </div>
+    <div>
+        <label for="salasana">
+            Salasana
+        </label>
+        <input id="salasana" type="password" formControlName="salasana">
+    </div>
+    <button class="button" type="submit">Kirjaudu sisään</button>
+</form>
